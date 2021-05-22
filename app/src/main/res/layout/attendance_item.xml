@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:background="@color/colorPrimary"
+    >
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1dp"
+        app:cardMaxElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:padding="2dp">
+
+            <TextView
+                android:id="@+id/tvSubject_attendanceItem"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/tvObtained_attendanceItem"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Subject"
+                android:textStyle="italic"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tvObtained_attendanceItem"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_toStartOf="@id/tvTotalAttendance_attendanceItem"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Obtained"
+                android:textStyle="italic"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tvTotalAttendance_attendanceItem"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:background="@color/colorPrimary"
+                android:layout_toStartOf="@id/tvPercentageAttendance_attendanceItem"
+                android:gravity="center"
+                android:text="Total\nClasses"
+                android:textStyle="italic"
+                android:textColor="@color/colorWhite" />
+
+            <TextView
+                android:id="@+id/tvPercentageAttendance_attendanceItem"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_alignParentEnd="true"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Percentage"
+                android:textStyle="italic|bold"
+                android:textColor="@color/colorWhite" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+</RelativeLayout>

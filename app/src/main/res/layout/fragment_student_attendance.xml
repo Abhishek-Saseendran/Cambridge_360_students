@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.StudentAttendanceFragment"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorGrey"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="400dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_margin="2dp"
+                android:id="@+id/rlHeaders">
+
+
+
+                <TextView
+                    android:id="@+id/tvSubject"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/tvObtained"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Subject"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvObtained"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_toStartOf="@id/tvTotalAttendance"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Obtained"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvTotalAttendance"
+                    android:layout_width="75dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:background="@color/colorPrimary"
+                    android:layout_toStartOf="@id/tvPercentageAttendance"
+                    android:gravity="center"
+                    android:text="Total\nClasses"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvPercentageAttendance"
+                    android:layout_width="85dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Percentage"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlHeaders"
+                android:layout_marginTop="5dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rvAttendanceStudent" />
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

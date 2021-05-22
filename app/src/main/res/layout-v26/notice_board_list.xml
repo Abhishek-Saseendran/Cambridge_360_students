@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="5dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layout_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="298dp"
+                android:id="@+id/rlImageCropper"
+                android:background="@drawable/ripple_layout_notice_board"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="10dp"
+                    android:background="@drawable/ripple_layout_notice_board">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/ivIfImage"
+                        android:scaleType="centerCrop"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_alignParentTop="true"
+                        android:clickable="true"
+                        android:focusable="true" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:elevation="7dp"
+                android:background="@drawable/layout_background"
+                android:layout_alignBottom="@id/rlImageCropper">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@drawable/ripple_layout_notice_board"
+                    android:padding="5dp"
+                    android:id="@+id/rlGoToFile">
+
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/rlFileMain"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/logo_file"
+                            android:layout_centerHorizontal="true"
+                            app:tint="@color/colorWhite"
+                            android:id="@+id/ivFileFormat"
+                            android:contentDescription="@string/image_format" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ivFileFormat"
+                            android:id="@+id/tvClassSem_Notice"
+                            android:textColor="@color/colorBlue"
+                            android:gravity="center_horizontal"
+                            android:textSize="12sp"
+                            android:textStyle="italic"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/rlFileMain"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="5dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvNoticeName"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="end" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvNoticeData"
+                            android:layout_marginTop="5dp"
+                            android:textSize="10sp"
+                            android:layout_below="@id/tvNoticeName"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="end" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tvNoticeAuthor"
+                            android:layout_marginTop="5dp"
+                            android:textSize="10sp"
+                            android:layout_below="@id/tvNoticeData"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="end" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

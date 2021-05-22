@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.StudentProfileFragment"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorGrey"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="400dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@id/progressBar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:src="@drawable/citech_text_logo"
+                app:tint="@color/colorWhite" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/citech_address"
+                android:textColor="@color/colorWhite"
+                android:gravity="center_horizontal"
+                android:textSize="10sp"/>
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginTop="30dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:id="@+id/civStudentProfileImage_Profile"
+                    android:layout_centerInParent="true"
+                    android:padding="2dp"
+                    android:background="@drawable/circle_image_background"/>
+
+                
+            </RelativeLayout>
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:id="@+id/tvStudentProfileName_Profile"
+                    android:maxLines="3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:id="@+id/tvStudentProfileEmail_Profile"
+                    android:maxLines="3"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:id="@+id/tvStudentProfileUSN_Profile"
+                    android:maxLines="3"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:id="@+id/tvStudentProfileClass_Profile"
+                    android:maxLines="3"
+                    android:layout_marginTop="10dp"/>
+                
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+                    
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone: "
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            android:maxLines="3"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="end"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            android:id="@+id/tvStudentProfilePhone_Profile"
+                            android:maxLines="3"
+                            />
+                        
+                        
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="D.O.B: "
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            android:maxLines="3"
+                            android:layout_marginTop="10dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="14sp"
+                            android:id="@+id/tvStudentProfileDOB_Profile"
+                            android:maxLines="3"
+                            android:layout_marginTop="10dp"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                
+                
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:foregroundGravity="center"
+            android:id="@+id/fabEditProfile_Profile"
+            android:src="@drawable/ic_edit"
+            android:elevation="6dp"
+            app:fabSize="normal"
+            android:clickable="true"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/edit_profile"
+            android:tooltipText="@string/edit_profile"
+            android:focusable="true"
+            app:rippleColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

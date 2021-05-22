@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.StudentInternalFragment"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorGrey"
+        android:layout_centerHorizontal="true"
+        android:maxWidth="400dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:id="@+id/llRadioGroup">
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:id="@+id/rgInternals">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbInternal1"
+                    android:text="1"
+                    android:textStyle="italic"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/colorGrey"
+                    android:tag="internal1"/>
+
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbInternal2"
+                    android:text="2"
+                    android:textStyle="italic"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/colorGrey"
+                    android:tag="internal2"/>
+
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbInternal3"
+                    android:text="3"
+                    android:textStyle="italic"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/colorGrey"
+                    android:tag="internal3"/>
+
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rbInternalAverage"
+                    android:text="Average"
+                    android:textStyle="italic"
+                    android:textColor="@color/colorWhite"
+                    android:buttonTint="@color/colorGrey"
+                    android:tag="internalAverage"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llRadioGroup"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_margin="2dp"
+                android:id="@+id/rlHeaders">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:text="Code"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:textColor="@color/colorWhite"
+                    android:id="@+id/tvCode"/>
+
+
+                <TextView
+                    android:id="@+id/tvSubject"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_toEndOf="@id/tvCode"
+                    android:layout_marginStart="2dp"
+                    android:layout_toStartOf="@id/tvScore"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Subject"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="Score"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorWhite" />
+
+            </RelativeLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlHeaders"
+                android:layout_marginTop="5dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rvInternalsStudent" />
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

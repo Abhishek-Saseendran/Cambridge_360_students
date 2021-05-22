@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="480dp"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorPrimary">
+
+    <androidx.cardview.widget.CardView
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="5dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layout_background">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:id="@+id/rlHeaders_feedbackList">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/rlDetails"
+                    android:layout_toStartOf="@id/space2"
+                    android:padding="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerVertical="true"
+                        android:padding="2dp"
+                        android:background="@drawable/circle_image_background"
+                        android:id="@+id/civTeacherImage_feedbackList"
+                        android:layout_alignParentStart="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorBlue"
+                        android:textStyle="italic|bold"
+                        android:id="@+id/tvTeacherName_feedbackList" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/tvTeacherName_feedbackList"
+                        android:maxLines="2"
+                        android:textStyle="italic"
+                        android:textSize="12sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/tvTeacherEmail_feedbackList" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@id/tvTeacherEmail_feedbackList"
+                        android:maxLines="2"
+                        android:layout_toEndOf="@id/civTeacherImage_feedbackList"
+                        android:textStyle="italic"
+                        android:textSize="12sp"
+                        android:gravity="end"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:id="@+id/tvSubjectName_feedbackList" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorPrimaryDark"
+                    android:id="@+id/space2"
+                    android:layout_toStartOf="@+id/ibSaveFeedBack_feedbackList"/>
+
+                <ImageButton
+                    android:padding="10dp"
+                    android:id="@+id/ibSaveFeedBack_feedbackList"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/ripple_layout_feedbackok"
+                    android:src="@drawable/ic_accept"
+                    android:tint="@color/colorGreen"/>
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_below="@id/rlHeaders_feedbackList"
+                android:id="@+id/spacer1" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/spacer1"
+                android:scrollbars="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textSize="12sp"
+                            android:text="@string/question_1"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion1"/>
+
+                        <RatingBar
+                            android:id="@+id/ratBarQuestion1"
+                            style="@style/Widget.AppCompat.RatingBar.Indicator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tvQuestion1"
+                            android:layout_centerHorizontal="true"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:layout_marginTop="5dp"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:rating="0"
+                            android:saveEnabled="true"
+                            android:stepSize="0.5" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_2"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion2"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion2"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion2"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_3"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion3"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion3"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion3"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_4"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion4"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion4"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion4"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_5"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion5"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion5"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion5"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_6"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion6"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion6"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion6"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_7"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion7"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion7"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion7"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_8"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion8"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion8"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion8"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_9"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion9"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion9"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion9"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:text="@string/question_10"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorWhite"
+                            android:textStyle="italic"
+                            android:id="@+id/tvQuestion10"/>
+
+                        <RatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Indicator"
+                            android:layout_below="@id/tvQuestion10"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerHorizontal="true"
+                            android:numStars="5"
+                            android:rating="0"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressTint="@color/colorGold"
+                            android:id="@+id/ratBarQuestion10"
+                            android:stepSize="0.5"
+                            android:isIndicator="false"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</RelativeLayout>

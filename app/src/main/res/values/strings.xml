@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">Cambridge 360° - Students</string>
+    <string name="say_hi">Say Hi</string>
+    <string name="about_us">About us</string>
+    <string name="website">Website</string>
+    <string name="contact">Contact</string>
+    <string name="locate">Locate</string>
+
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="hey_new_user">Hey new user!!\n Register now and explore what all you can do!!</string>
+    <string name="make_sure">Make sure your details are entered correctly as you wont be able to edit this again!!</string>
+    <string name="welcome_back">Welcome back!!\nSign in to continue..</string>
+    <string name="forgot_password">Forgot Password?\nDont worry, <u>Click here!!</u></string>
+    <string name="not_yet_registered">Not yet Registered? <u>Click here!!</u></string>
+    <string name="already_registered">Already registered? <u>Click here</u> to login!!</string>
+    <string name="sign_out">Sign out</string>
+    <string name="profile">Profile</string>
+    <string name="internals">Internals</string>
+    <string name="attendance">Attendance</string>
+    <string name="explore">Explore</string>
+    <string name="notice_board">Notice Board</string>
+    <string name="lost_and_found">Lost and found</string>
+    <string name="feedback">Feedback</string>
+    <string name="locate_bus">Locate bus</string>
+    <string name="your_name">Your name</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="citech_address">K.R.Puram, Bengaluru–560036 | Ph: 080–25618798/99</string>
+
+
+    <string name="choose_sem">Select your sem</string>
+    <string-array name="sem_array">
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="sem_basic_science">
+        <item>physics</item>
+        <item>chemistry</item>
+    </string-array>
+
+    <string name="choose_section">Select your section</string>
+    <string-array name="section_array">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+    <string-array name="section_basic_science">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+    </string-array>
+
+    <string name="choose_elective1">Choose your elective 1</string>
+    <string name="choose_elective2">Choose your elective 2</string>
+
+    <string name="choose_branch">Select your branch</string>
+    <string-array name="branch_array">
+        <item>CSE</item>
+        <item>ISE</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>CIV</item>
+        <item>MECH</item>
+        <item>BSC</item>
+    </string-array>
+
+    <string name="percentage" formatted="false">%</string>
+    <string name="edit_profile">Edit Profile</string>
+
+    <string name="question_1">1. Regularity and Punctuality in engaging the class</string>
+    <string name="question_2">2. Communication distinctly and effectively</string>
+    <string name="question_3">3. Effective usage of Blackboard</string>
+    <string name="question_4">4. Syllabus coverage and depth of coverage</string>
+    <string name="question_5">5. Preparedness and delivery in the class - Lecture notes, Course outcomes, Problem solving</string>
+    <string name="question_6">6. Planning of lesson, helping in understanding the concepts with illustrate examples and effective explanation</string>
+    <string name="question_7">7. Maintaining discipline and control over the students</string>
+    <string name="question_8">8. Faculty provides guidance, counselling in academic &amp; non-academic </string>
+    <string name="question_9">9. Availability after class hours for discussion</string>
+    <string name="question_10">10. Activity based teaching methodology</string>
+    <string name="image_format">Image Format</string>
+
+    <string name="options">Options</string>
+    <string name="settings">Settings</string>
+
+</resources>
